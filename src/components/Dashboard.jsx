@@ -81,10 +81,19 @@ const dataNoviembre = [
   { date: '19 Nov', ventas: 358000, base: 326000, gastos: 2285800, nomina: 80000, proveedores: 569450, totalPagos: 2935250 },
 ];
 
+// PASO 1: Combinar todos los arrays de datos en uno solo
+const combinedData = [
+  ...dataSeptiembre, 
+  ...dataOctubre, 
+  ...dataNoviembre
+];
+
 const db = {
   sep: { id: 'sep', label: 'Septiembre 2025', shortLabel: 'Sep 2025', data: dataSeptiembre, range: '13 Sep - 30 Sep' },
   oct: { id: 'oct', label: 'Octubre 2025', shortLabel: 'Oct 2025', data: dataOctubre, range: '1 Oct - 31 Oct' },
-  nov: { id: 'nov', label: 'Noviembre 2025', shortLabel: 'Nov 2025', data: dataNoviembre, range: '1 Nov - 19 Nov' }
+  nov: { id: 'nov', label: 'Noviembre 2025', shortLabel: 'Nov 2025', data: dataNoviembre, range: '1 Nov - 19 Nov' },
+  all: { id: 'all', label: 'Todo el Historial', shortLabel: 'Total', data: combinedData, range: '13 Sep - 19 Nov' }
+
 };
 
 // --- CONFIGURACIÓN VISUAL ---
