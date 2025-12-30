@@ -71,7 +71,7 @@ const dataNoviembre = [
   { date: '9 Nov', ventas: 1343600, base: 300000, gastos: 0, nomina: 230000, proveedores: 103600, totalPagos: 333600 },
   { date: '10 Nov', ventas: 208000, base: 300000, gastos: 0, nomina: 40000, proveedores: 185000, totalPagos: 225000 },
   { date: '11 Nov', ventas: 234000, base: 283000, gastos: 10000, nomina: 90000, proveedores: 40000, totalPagos: 140000 },
-  { date: '12 Nov', ventas: 0, base: 0, gastos: 0, nomina: 0, proveedores: 0, totalPagos: 0 },
+  { date: '12 Nov', ventas: 0, base: 0, gastos: 0, nomina: 0, proveedores: 0, totalPagos: 0 }, // Datos ajustados (sin información de movimientos)
   { date: '13 Nov', ventas: 358000, base: 280000, gastos: 0, nomina: 50000, proveedores: 187000, totalPagos: 237000 },
   { date: '14 Nov', ventas: 399000, base: 300000, gastos: 40000, nomina: 61000, proveedores: 583600, totalPagos: 684600 },
   { date: '15 Nov', ventas: 1064500, base: 310000, gastos: 170000, nomina: 380000, proveedores: 750200, totalPagos: 1300200 },
@@ -79,20 +79,58 @@ const dataNoviembre = [
   { date: '17 Nov', ventas: 598700, base: 195000, gastos: 26000, nomina: 155000, proveedores: 102700, totalPagos: 283700 },
   { date: '18 Nov', ventas: 476500, base: 310000, gastos: 0, nomina: 105000, proveedores: 455500, totalPagos: 560500 },
   { date: '19 Nov', ventas: 358000, base: 326000, gastos: 2285800, nomina: 80000, proveedores: 569450, totalPagos: 2935250 },
+  { date: '20 Nov', ventas: 197000, base: 356000, gastos: 2500, nomina: 80000, proveedores: 177600, totalPagos: 260100 },
+  { date: '21 Nov', ventas: 248500, base: 300000, gastos: 0, nomina: 80000, proveedores: 327000, totalPagos: 407000 },
+  { date: '22 Nov', ventas: 1317500, base: 107000, gastos: 15000, nomina: 209000, proveedores: 416000, totalPagos: 640000 },
+  { date: '23 Nov', ventas: 876000, base: 380000, gastos: 0, nomina: 215000, proveedores: 897700, totalPagos: 1112700 },
+  { date: '24 Nov', ventas: 277500, base: 158000, gastos: 0, nomina: 140000, proveedores: 69600, totalPagos: 209600 },
+  { date: '25 Nov', ventas: 341500, base: 150000, gastos: 0, nomina: 140000, proveedores: 78200, totalPagos: 218200 },
+  { date: '26 Nov', ventas: 283500, base: 195000, gastos: 2000, nomina: 110000, proveedores: 201000, totalPagos: 313000 },
+  { date: '27 Nov', ventas: 203000, base: 165000, gastos: 0, nomina: 170000, proveedores: 263700, totalPagos: 433700 },
+  { date: '28 Nov', ventas: 401000, base: 112000, gastos: 106000, nomina: 110000, proveedores: 173500, totalPagos: 389500 },
+  { date: '29 Nov', ventas: 1594000, base: 180000, gastos: 0, nomina: 200000, proveedores: 1298000, totalPagos: 1498000 },
+  { date: '30 Nov', ventas: 1134000, base: 216000, gastos: 0, nomina: 340000, proveedores: 653000, totalPagos: 993000 }
+];
+
+const dataDiciembre = [
+  { date: '1 Dic', ventas: 250600, base: 207000, gastos: 0, nomina: 130000, proveedores: 125900, totalPagos: 255900 },
+  { date: '2 Dic', ventas: 717500, base: 180000, gastos: 12000, nomina: 165000, proveedores: 156500, totalPagos: 333500 },
+  { date: '3 Dic', ventas: 404000, base: 204000, gastos: 13700, nomina: 135000, proveedores: 592200, totalPagos: 740900 },
+  { date: '4 Dic', ventas: 215000, base: 175000, gastos: 3000, nomina: 105000, proveedores: 81600, totalPagos: 189600 },
+  { date: '5 Dic', ventas: 456000, base: 170000, gastos: 81000, nomina: 170000, proveedores: 630500, totalPagos: 881500 },
+  { date: '6 Dic', ventas: 1487800, base: 90000, gastos: 50000, nomina: 255000, proveedores: 558300, totalPagos: 863300 },
+  { date: '7 Dic', ventas: 1042000, base: 120000, gastos: 3900, nomina: 245000, proveedores: 866000, totalPagos: 1114900 },
+  { date: '8 Dic', ventas: 314000, base: 70000, gastos: 0, nomina: 200000, proveedores: 65000, totalPagos: 265000 },
+  { date: '9 Dic', ventas: 114500, base: 150000, gastos: 24000, nomina: 105000, proveedores: 304600, totalPagos: 433600 },
+  { date: '10 Dic', ventas: 439900, base: 170000, gastos: 0, nomina: 165000, proveedores: 275800, totalPagos: 440800 },
+  { date: '11 Dic', ventas: 447500, base: 200000, gastos: 0, nomina: 110000, proveedores: 179600, totalPagos: 289600 },
+  { date: '12 Dic', ventas: 755000, base: 235000, gastos: 2800, nomina: 185000, proveedores: 544500, totalPagos: 732300 },
+  { date: '13 Dic', ventas: 1511500, base: 220000, gastos: 114000, nomina: 136000, proveedores: 1307700, totalPagos: 1557700 },
+  { date: '14 Dic', ventas: 1386500, base: 280000, gastos: 0, nomina: 508000, proveedores: 209200, totalPagos: 717200 },
+  { date: '15 Dic', ventas: 445500, base: 300000, gastos: 0, nomina: 117000, proveedores: 326600, totalPagos: 443600 },
+  { date: '16 Dic', ventas: 318500, base: 300000, gastos: 15000, nomina: 135000, proveedores: 253250, totalPagos: 403250 },
+  { date: '17 Dic', ventas: 338000, base: 300000, gastos: 0, nomina: 90000, proveedores: 229000, totalPagos: 319000 },
+  { date: '18 Dic', ventas: 442500, base: 300000, gastos: 0, nomina: 140000, proveedores: 214900, totalPagos: 354900 },
+  { date: '19 Dic', ventas: 567500, base: 300000, gastos: 10000, nomina: 195000, proveedores: 814980, totalPagos: 1019980 },
+  { date: '20 Dic', ventas: 1525000, base: 300000, gastos: 32000, nomina: 200000, proveedores: 602100, totalPagos: 834100 },
+  { date: '21 Dic', ventas: 1157500, base: 300000, gastos: 0, nomina: 335000, proveedores: 678600, totalPagos: 1013600 },
+  { date: '22 Dic', ventas: 299500, base: 300000, gastos: 0, nomina: 145000, proveedores: 579900, totalPagos: 724900 },
 ];
 
 // PASO 1: Combinar todos los arrays de datos en uno solo
 const combinedData = [
   ...dataSeptiembre, 
   ...dataOctubre, 
-  ...dataNoviembre
+  ...dataNoviembre,
+  ...dataDiciembre,
 ];
 
 const db = {
   sep: { id: 'sep', label: 'Septiembre 2025', shortLabel: 'Sep 2025', data: dataSeptiembre, range: '13 Sep - 30 Sep' },
   oct: { id: 'oct', label: 'Octubre 2025', shortLabel: 'Oct 2025', data: dataOctubre, range: '1 Oct - 31 Oct' },
-  nov: { id: 'nov', label: 'Noviembre 2025', shortLabel: 'Nov 2025', data: dataNoviembre, range: '1 Nov - 19 Nov' },
-  all: { id: 'all', label: 'Todo el Historial', shortLabel: 'Total', data: combinedData, range: '13 Sep - 19 Nov' }
+  nov: { id: 'nov', label: 'Noviembre 2025', shortLabel: 'Nov 2025', data: dataNoviembre, range: '1 Nov - 30 Nov' },
+  dic: { id: 'dic', label: 'Diciembre 2025', shortLabel: 'Dic 2025', data: dataDiciembre, range: '1 Dic - 22 Dic' },
+  all: { id: 'all', label: 'Todo el Historial', shortLabel: 'Total', data: combinedData, range: '13 Sep - 22 Dic' }
 
 };
 
@@ -150,7 +188,7 @@ const CustomTooltip = ({ active, payload, label }) => {
 };
 
 export default function FinancialDashboard() {
-  const [selectedMonth, setSelectedMonth] = useState('nov');
+  const [selectedMonth, setSelectedMonth] = useState('dic');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null);
 
