@@ -115,6 +115,15 @@ const dataDiciembre = [
   { date: '20 Dic', ventas: 1525000, base: 300000, gastos: 32000, nomina: 200000, proveedores: 602100, totalPagos: 834100 },
   { date: '21 Dic', ventas: 1157500, base: 300000, gastos: 0, nomina: 335000, proveedores: 678600, totalPagos: 1013600 },
   { date: '22 Dic', ventas: 299500, base: 300000, gastos: 0, nomina: 145000, proveedores: 579900, totalPagos: 724900 },
+  { date: '23 Dic', ventas: 376000, base: 300000, gastos: 12500, nomina: 185000, proveedores: 144200, totalPagos: 341700 },
+  { date: '24 Dic', ventas: 629000, base: 300000, gastos: 7000, nomina: 137000, proveedores: 200846, totalPagos: 344846 },
+  { date: '25 Dic', ventas: 0, base: 0, gastos: 0, nomina: 0, proveedores: 0, totalPagos: 0 },
+  { date: '26 Dic', ventas: 689000, base: 300000, gastos: 0, nomina: 293000, proveedores: 669050, totalPagos: 962050 },
+  { date: '27 Dic', ventas: 1436500, base: 300000, gastos: 0, nomina: 196000, proveedores: 821630, totalPagos: 1017630 },
+  { date: '28 Dic', ventas: 1319000, base: 300000, gastos: 0, nomina: 265000, proveedores: 191700, totalPagos: 456700 },
+  { date: '29 Dic', ventas: 773000, base: 300000, gastos: 493100, nomina: 107000, proveedores: 685947, totalPagos: 1286047 },
+  { date: '30 Dic', ventas: 599000, base: 300000, gastos: 1526636, nomina: 236000, proveedores: 123900, totalPagos: 1886536 },
+  { date: '31 Dic', ventas: 519000, base: 300000, gastos: 0, nomina: 150000, proveedores: 249500, totalPagos: 399500 },
 ];
 
 // PASO 1: Combinar todos los arrays de datos en uno solo
@@ -129,8 +138,9 @@ const db = {
   sep: { id: 'sep', label: 'Septiembre 2025', shortLabel: 'Sep 2025', data: dataSeptiembre, range: '13 Sep - 30 Sep' },
   oct: { id: 'oct', label: 'Octubre 2025', shortLabel: 'Oct 2025', data: dataOctubre, range: '1 Oct - 31 Oct' },
   nov: { id: 'nov', label: 'Noviembre 2025', shortLabel: 'Nov 2025', data: dataNoviembre, range: '1 Nov - 30 Nov' },
-  dic: { id: 'dic', label: 'Diciembre 2025', shortLabel: 'Dic 2025', data: dataDiciembre, range: '1 Dic - 22 Dic' },
-  all: { id: 'all', label: 'Todo el Historial', shortLabel: 'Total', data: combinedData, range: '13 Sep - 22 Dic' }
+  dic: { id: 'dic', label: 'Diciembre 2025', shortLabel: 'Dic 2025', data: dataDiciembre, range: '1 Dic - 31 Dic' },
+  all: { id: 'all', label: 'Todo el Historial', shortLabel: 'Total', data: combinedData, range: '13 Sep - 31 Dic' }
+
 
 };
 
